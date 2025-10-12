@@ -2,7 +2,7 @@ name: Update Lines of Code Badges
 
 on:
   schedule:
-    - cron: '0 0 * * 0'   # every Sunday
+    - cron: '0 0 * * 0'
   workflow_dispatch:
 
 jobs:
@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -23,14 +25,12 @@ jobs:
 
       - name: Update README badges safely
         run: |
-          # Use awk to safely replace section between markers
           awk '
           /<!-- LOC_BADGES_START -->/ {print; system("cat badges.md"); f=1; next}
           /<!-- LOC_BADGES_END -->/ {f=0}
           !f
           ' README.md > tmp && mv tmp README.md
 
-          # Commit & push updates
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md

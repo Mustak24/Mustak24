@@ -3,7 +3,7 @@ import requests
 from urllib.parse import quote
 
 USERNAME = "Mustak24"  # your GitHub username
-TOKEN = os.getenv("GH_TOKEN")  # optional, for private repos or API limits
+TOKEN = os.getenv("PERSONAL_TOKEN")  # optional, for private repos or API limits
 
 headers = {"Authorization": f"token {TOKEN}"} if TOKEN else {}
 
