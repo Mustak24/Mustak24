@@ -86,12 +86,3 @@ src="https://streak-stats.demolab.com/?user=Mustak24&stroke=ffffff&background=1c
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mustak24&theme=dark&hide_border=false&layout=compact)
 
-
-<!-- LOC_BADGES_START -->
-Loading language stats...
-<!-- LOC_BADGES_END -->
-
-
-
-
-
