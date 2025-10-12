@@ -1,0 +1,33 @@
+name: Update Lines of Code Badges
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'   # every Sunday
+  workflow_dispatch:
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Count LOC and generate badges
+        run: |
+          pip install requests
+          python .github/scripts/count_loc_badges.py > badges.md
+
+      - name: Update README badges
+        run: |
+          # Replace section between markers
+          sed -i '/<!-- LOC_BADGES_START -->/,/<!-- LOC_BADGES_END -->/c\<!-- LOC_BADGES_START -->\'"$(cat badges.md)"'\<!-- LOC_BADGES_END -->' README.md
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update LOC badges" || echo "No changes to commit"
+          git push
