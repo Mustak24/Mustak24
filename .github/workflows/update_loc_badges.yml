@@ -21,11 +21,16 @@ jobs:
           pip install requests
           python .github/scripts/count_loc_badges.py > badges.md
 
-      - name: Update README badges
+      - name: Update README badges safely
         run: |
-          # Replace section between markers
-          sed -i '/<!-- LOC_BADGES_START -->/,/<!-- LOC_BADGES_END -->/c\<!-- LOC_BADGES_START -->\'"$(cat badges.md)"'\<!-- LOC_BADGES_END -->' README.md
+          # Use awk to safely replace section between markers
+          awk '
+          /<!-- LOC_BADGES_START -->/ {print; system("cat badges.md"); f=1; next}
+          /<!-- LOC_BADGES_END -->/ {f=0}
+          !f
+          ' README.md > tmp && mv tmp README.md
 
+          # Commit & push updates
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
