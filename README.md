@@ -68,13 +68,13 @@ Welcome to my GitHub profile! I am a passionate developer always exploring and l
 
 # Badges
 
-- ### My GitHub Stats
+### My GitHub Stats
 
 <br/>
 <a href="http://www.github.com/Mustak24"><img width="75%" src="https://github-readme-activity-graph.vercel.app/graph?username=Mustak24&bg_color=1c1917&color=ffffff&line=0891b2&point=ffffff&area_color=1c1917&area=true&hide_border=true&custom_title=GitHub%20Commits%20Graph" /></a> <br/>
 
 
-- ### My GitHub Stats
+### My GitHub Stats
 
 <br/>
 <a href="http://www.github.com/Mustak24"><img
@@ -82,9 +82,14 @@ src="https://streak-stats.demolab.com/?user=Mustak24&stroke=ffffff&background=1c
 
 
 
-- ### 📊 GitHub Stats
+### 📊 GitHub Stats
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mustak24&theme=dark&hide_border=false&layout=compact)
+
+
+<!-- LOC_BADGES_START -->
+Loading language stats...
+<!-- LOC_BADGES_END -->
 
 
 
