@@ -85,4 +85,5 @@ src="https://streak-stats.demolab.com/?user=Mustak24&stroke=ffffff&background=1c
 ### 📊 GitHub Stats
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Mustak24&theme=dark&hide_border=false&layout=compact)
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=mustak24&label=Profile%20views&color=0e75b6&style=flat" alt="mustak24" /> </p>
 
