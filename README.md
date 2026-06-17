@@ -7,7 +7,6 @@ Welcome to my GitHub profile! I am a passionate developer always exploring and l
 - 🌍 I'm from Rajasthan, India
 - 📫 Reach me at [mustak.coc786@gmail.com](mailto:mustak.coc786@gmail.com)
 - 👨‍💻 Check out my portfolio at [MyPortfolio](http://mustak24.netlify.app)
-- 🌱 I'm currently learning React Native
 
 
 ## 🌐 Connect with Me
